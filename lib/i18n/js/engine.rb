@@ -4,7 +4,7 @@ module I18n
   module JS
     class Engine < ::Rails::Engine
       initializer :after => "sprockets.environment" do
-        ActiveSupport.on_load(:after_initialize, :yield => true) do
+        ActiveSupport.on_load(:before_initialize, :yield => true) do
           next unless JS.has_asset_pipeline?
           next unless Rails.configuration.assets.compile
 
