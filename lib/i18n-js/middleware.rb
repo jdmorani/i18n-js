@@ -13,7 +13,7 @@ module SimplesIdeias
 
       private
       def cache_path
-        @cache_path ||= Rails.root.join("tmp/cache/i18n-js.yml")
+        @cache_path ||= Rails.root.join("tmp/i18n-js.yml")
       end
 
       def cache
